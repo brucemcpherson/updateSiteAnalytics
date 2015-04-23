@@ -1,5 +1,5 @@
 # Google Apps Script Project: updateSiteAnalytics
-This repo (updateSiteAnalytics) was automatically updated on 12 March 2015 23:19:59 GMT by GasGit
+This repo (updateSiteAnalytics) was automatically updated on 23 April 2015 20:09:27 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project updateSiteAnalytics
@@ -14,31 +14,10 @@ forPublishing| server_js
 updateSite| server_js
 testing| server_js
 ### Directly referenced libraries
-*library*|*identifier*|*key*|*version*|*dev mode*|*source*|
---- | --- | --- | --- | --- | --- 
-cFlatten| cFlatten|MqxKdBrlw18FDd-X5zQLd7yz3TLx7pV4j|6|no|[here](libraries/cFlatten "library source")
-cDbAbstraction| cDbAbstraction|MHfCjPQlweartW45xYs6hFai_d-phDA33|29|no|[here](libraries/cDbAbstraction "library source")
-cSiteStats| cSiteStats|MKHWwn03HE7ktl0fffddC-iz3TLx7pV4j|6|no|[here](libraries/cSiteStats "library source")
-cCacheHandler| cCacheHandler|M3reA5eBxtwxSqCEgPywb9ai_d-phDA33|8|no|[here](libraries/cCacheHandler "library source")
-cDriverSheet| cDriverSheet|Mrckbr9_w7PCphJtOzhzA_Cz3TLx7pV4j|5|no|[here](libraries/cDriverSheet "library source")
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|11|no|[here](libraries/cUseful "library source")
+no libraries discovered
 ### All dependencies and sub dependencies
-*library*|*identifier*|*key*|*version*|*dev mode*|*source*|
---- | --- | --- | --- | --- | --- 
-cFlatten| cFlatten|MqxKdBrlw18FDd-X5zQLd7yz3TLx7pV4j|6|no|[here](libraries/cFlatten "library source")
-cDbAbstraction| cDbAbstraction|MHfCjPQlweartW45xYs6hFai_d-phDA33|29|no|[here](libraries/cDbAbstraction "library source")
-cUAMeasure| cUAMeasure|MIHfxr-fc_7bXa1l0Dkk0oqi_d-phDA33|6|no|[here](libraries/cUAMeasure "library source")
-cNamedLock| cNamedLock|Mpv7vUR0126U53sfSMXsAPai_d-phDA33|12|no|[here](libraries/cNamedLock "library source")
-cCacheHandler| cCacheHandler|M3reA5eBxtwxSqCEgPywb9ai_d-phDA33|13|no|[here](libraries/cCacheHandler "library source")
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|23|no|[here](libraries/cUseful "library source")
-cSiteStats| cSiteStats|MKHWwn03HE7ktl0fffddC-iz3TLx7pV4j|6|no|[here](libraries/cSiteStats "library source")
-cDriverMongoLab| cDriverMongoLab|MPAHw_-cHNDxsYAg263J7Fai_d-phDA33|6|no|[here](libraries/cDriverMongoLab "library source")
-cDriverSheet| cDriverSheet|Mrckbr9_w7PCphJtOzhzA_Cz3TLx7pV4j|5|no|[here](libraries/cDriverSheet "library source")
-cDelegateMemory| cDelegateMemory|MyIN8WHN1Uf3EG-obHsjrAyz3TLx7pV4j|10|no|[here](libraries/cDelegateMemory "library source")
-cDriverMemory| cDriverMemory|M96uVZRXXG_RY3c2at9V6tSz3TLx7pV4j|10|no|[here](libraries/cDriverMemory "library source")
+no libraries discovered
 ### Enabled Google Services
-*library*|*identifier*|*version*
---- | --- | --- 
-analytics| Analytics|v3
+no libraries discovered
 ###Need more detail ?
 You can see [full project info as json here](info.json)
