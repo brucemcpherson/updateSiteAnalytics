@@ -9,7 +9,7 @@ var PAGETYPES = {
 };
 
 // keep plus ones in cache for a few hours
-var cache = new cCacheHandler.CacheHandler(60*60*4,'sitePlusOnes',false);
+var cache = new cCacheHandler.CacheHandler(60*60*5,'sitePlusOnes',false);
 
 
 function preCachePlusOnes() {
