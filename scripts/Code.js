@@ -11,24 +11,47 @@ var PAGETYPES = {
 // keep plus ones in cache for a few hours
 var cache = new cCacheHandler.CacheHandler(60*60*5,'sitePlusOnes',false);
 
-
+// leave comment - hack to provoke an authorization dialog. Drive.Files.copy(resource, fileId)
+  
+// create tracing object - need to have enabled drive advanced service to get a properly scoped token
+var trace = new cChromeTrace.ChromeTrace().setAccessToken(ScriptApp.getOAuthToken());
+  
+  
 function preCachePlusOnes() {
   // if we do this first & seperately we can limit execution time
   // all this does is get the site and populate cache so that when we run the real thing it picks it up from cache
   // can be scheduled to run a couple of times to make sure it picks up everything
   
-  // get the parameters for this site
-  var options = cSiteStats.getOptions('ramblings');
-    // this is the site i'm working with
-  var site = SitesApp.getSite(options.domain, options.site);
+  trace.begin ("preCachePlusOnes");
   
-  // get all the pages on the site
-  var root = getPages(site);
-  
-  // add plus 1 counts
-  addPlusOneCounts (root,options,true);
-  
-  
+  try {
+    trace.begin ("setup");
+    // get the parameters for this site
+    var options = cSiteStats.getOptions('ramblings');
+      // this is the site i'm working with
+    var site = SitesApp.getSite(options.domain, options.site);
+    trace.end ("setup");
+    
+    // get all the pages on the site
+    trace.begin("getPages");
+    var root = getPages(site);
+    trace.end ("getPages");
+    
+    // add plus 1 counts
+    trace.begin("addPlusOnes");
+    addPlusOneCounts (root,options,true);
+    trace.end("addPlusOnes");
+    done ({args:{success:true}});
+  }
+  catch (err) {
+    done ({args:{success:false, err:err}});
+    throw err;
+  }
+
+  function done (args) {
+    trace.end ('preCachePlusOnes' , args );
+    trace.dump ('/Published Scripts/analytics');
+  }
 }
 function analyzePages() {
   
@@ -179,12 +202,15 @@ function addAnalyticStats (root, options) {
  */
 function addPlusOneCounts (root,options,optCache) {
   
+  trace.begin (root.getUrl());
   root.plusOnes = canonPlusOnes ( root.getUrl() , options, optCache);
   
+  trace.counter("recurseChildren",{args:{ childrenCount:root.children.length}});
   root.children.forEach( function (d) {
     addPlusOneCounts (d,options,optCache);
   });
   
+  trace.end (root.getUrl());
   return root;
 } 
 
