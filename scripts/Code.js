@@ -483,7 +483,11 @@ function PageTreeObject (parent,page) {
       topicRoot: self.getTopicRoot(),
       name:self.getName(),
       title:self.getTitle(),
-      plusOnes:self.plusOnes
+      plusOnes:self.plusOnes,
+      dates:{
+        created: page_  && page_.getDatePublished ? page_.getDatePublished().getTime() : null,
+        updates: page_  && page_.getLastUpdated ? page_.getLastUpdated().getTime() : null
+      }
     };
   };
   
