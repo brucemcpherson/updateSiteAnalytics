@@ -1,5 +1,5 @@
 # Google Apps Script Project: updateSiteAnalytics
-This repo (updateSiteAnalytics) was automatically updated on 09 June 2015 19:06:18 BST by GasGit
+This repo (updateSiteAnalytics) was automatically updated on 24 June 2015 13:25:00 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project updateSiteAnalytics
@@ -14,6 +14,7 @@ forPublishing| server_js
 updateSite| server_js
 testing| server_js
 siteDetail| server_js
+cross| server_js
 ### Directly referenced libraries
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
@@ -30,8 +31,8 @@ cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|25|no|[here](libraries/cUsefu
 cFlatten| cFlatten|MqxKdBrlw18FDd-X5zQLd7yz3TLx7pV4j|8|no|[here](libraries/cFlatten "library source")
 cDbAbstraction| cDbAbstraction|MHfCjPQlweartW45xYs6hFai_d-phDA33|37|no|[here](libraries/cDbAbstraction "library source")
 cUAMeasure| cUAMeasure|MIHfxr-fc_7bXa1l0Dkk0oqi_d-phDA33|6|no|[here](libraries/cUAMeasure "library source")
-cNamedLock| cNamedLock|Mpv7vUR0126U53sfSMXsAPai_d-phDA33|12|no|[here](libraries/cNamedLock "library source")
-cCacheHandler| cCacheHandler|M3reA5eBxtwxSqCEgPywb9ai_d-phDA33|13|no|[here](libraries/cCacheHandler "library source")
+cNamedLock| cNamedLock|Mpv7vUR0126U53sfSMXsAPai_d-phDA33|14|no|[here](libraries/cNamedLock "library source")
+cCacheHandler| cCacheHandler|M3reA5eBxtwxSqCEgPywb9ai_d-phDA33|15|no|[here](libraries/cCacheHandler "library source")
 cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|25|no|[here](libraries/cUseful "library source")
 cChromeTrace| cChromeTrace|M6SHE8Ysn-5KyFf8NGzQpTSz3TLx7pV4j|6|no|[here](libraries/cChromeTrace "library source")
 cDriveJsonApi| cDriveJsonApi|MvIo2UPbHoLDhAVcRHrI-VSz3TLx7pV4j|8|no|[here](libraries/cDriveJsonApi "library source")
