@@ -1,5 +1,5 @@
 # Google Apps Script Project: updateSiteAnalytics
-This repo (updateSiteAnalytics) was automatically updated on 15 September 2015 11:47:11 BST by GasGit
+This repo (updateSiteAnalytics) was automatically updated on 28 September 2015 17:42:18 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project updateSiteAnalytics
@@ -45,6 +45,7 @@ cDriverMongoLab| cDriverMongoLab|MPAHw_-cHNDxsYAg263J7Fai_d-phDA33|6|no|[here](l
 ### Enabled Google Services
 *library*|*identifier*|*version*
 --- | --- | --- 
-Drive API| Drive|v2
+Drive| Drive|v2
+Analytics| Analytics|v3
 ###Need more detail ?
 You can see [full project info as json here](info.json)
