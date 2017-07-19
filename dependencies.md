@@ -1,5 +1,5 @@
 # Google Apps Script Project: updateSiteAnalytics
-This repo (updateSiteAnalytics) was automatically updated on 27 July 2016 10:34:03 BST by GasGit
+This repo (updateSiteAnalytics) was automatically updated on 19 July 2017 11:06:23 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project updateSiteAnalytics
@@ -38,14 +38,14 @@ cUAMeasure| cUAMeasure|MIHfxr-fc_7bXa1l0Dkk0oqi_d-phDA33|6|no|[here](libraries/c
 cDriverMongoLab| cDriverMongoLab|MPAHw_-cHNDxsYAg263J7Fai_d-phDA33|6|no|[here](libraries/cDriverMongoLab "library source")
 cDriverSheet| cDriverSheet|Mrckbr9_w7PCphJtOzhzA_Cz3TLx7pV4j|11|no|[here](libraries/cDriverSheet "library source")
 cDelegateMemory| cDelegateMemory|MyIN8WHN1Uf3EG-obHsjrAyz3TLx7pV4j|10|no|[here](libraries/cDelegateMemory "library source")
-cDriverMemory| cDriverMemory|M96uVZRXXG_RY3c2at9V6tSz3TLx7pV4j|11|no|[here](libraries/cDriverMemory "library source")
+cDriverMemory| cDriverMemory|M96uVZRXXG_RY3c2at9V6tSz3TLx7pV4j|12|no|[here](libraries/cDriverMemory "library source")
 cChromeTrace| cChromeTrace|M6SHE8Ysn-5KyFf8NGzQpTSz3TLx7pV4j|6|no|[here](libraries/cChromeTrace "library source")
 cDriveJsonApi| cDriveJsonApi|MvIo2UPbHoLDhAVcRHrI-VSz3TLx7pV4j|8|no|[here](libraries/cDriveJsonApi "library source")
 cUrlResult| cUrlResult|M59PE-C_VqcthwNDmXB9gsCz3TLx7pV4j|16|no|[here](libraries/cUrlResult "library source")
 ### Enabled Google Services
 *library*|*identifier*|*version*
 --- | --- | --- 
-Drive| Drive|v2
-Analytics| Analytics|v3
+Drive| Drive|unknown
+Analytics| Analytics|unknown
 ###Need more detail ?
 You can see [full project info as json here](info.json)
