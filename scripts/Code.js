@@ -649,10 +649,11 @@ function getPlusOneCount(url,optCache) {
     if(optCache) {
       cache.putCache (r,query);
     }
+    console.log('uncached',r);
   }
   else {
     var r = cached;
-   
+   console.log('cached',r);
   }
   return Number(r);
 }
