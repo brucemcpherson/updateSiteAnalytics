@@ -8,6 +8,11 @@ var PAGETYPES = {
   TOPICROOT:3
 };
 
+var p1SAFE = {
+  id:"1181bwZspoKoP98o4KuzO0S11IsvE59qCwiw4la9kL4o",
+  name:"savedplusone"
+};
+
 // keep plus ones in cache for a few hours
 var cache = new cCacheHandler.CacheHandler(60*60*5,'sitePlusOnes',false);
 
@@ -15,12 +20,55 @@ var cache = new cCacheHandler.CacheHandler(60*60*5,'sitePlusOnes',false);
   
 // create tracing object - need to have enabled drive advanced service to get a properly scoped token
 var trace = new cChromeTrace.ChromeTrace().setAccessToken(ScriptApp.getOAuthToken());
+
+function onceCachePlusOnes() {
   
+  var data = getDb()
+
+  .map  (function (d) {
+    return {
+      pageType:d.page.pageType,
+      url: d.page.url ,
+      plusOnes: d.page.plusOnes
+    };
+  })
   
-function preCachePlusOnes() {
+  .filter (function (d) {
+    return d.pageType !== PAGETYPES.SECTION;
+  });
+
+  
+  var sheet = SpreadsheetApp.openById(p1SAFE.id).getSheetByName(p1SAFE.name)
+
+  
+  // write to sheet for safety
+  new cUseful.Fiddler(sheet)
+  .setData (data)
+  .dumpValues();
+  
+  return data;
+  
+}
+
+
+//dont want to lose the old data as plusOnes have disappeared
+function simCachePlusOnes() {
+  
+  return new cUseful.Fiddler(SpreadsheetApp.openById(p1SAFE.id).getSheetByName(p1SAFE.name))
+  .getData().reduce (function (p,c) {
+    p[c.url] = c.plusOnes;  
+    return p;
+  },{})
+
+  
+}
+
+function oldpreCachePlusOnes() {
   // if we do this first & seperately we can limit execution time
   // all this does is get the site and populate cache so that when we run the real thing it picks it up from cache
   // can be scheduled to run a couple of times to make sure it picks up everything
+  
+  
   
   trace.begin ("preCachePlusOnes");
   
@@ -84,8 +132,11 @@ function analyzePages() {
   // get all the pages on the site
   var root = getPages(site);
   
+  // nowadays, the plusOnes are not updated - so just keep carrying them forward
+  var plusOnes = simCachePlusOnes();
+  
   // add plus 1 counts
-  addPlusOneCounts (root,options,true);
+  addPlusOneCounts (plusOnes,root,options,true);
   
   // add analytics objects
   addAnalyticStats (root, options);
@@ -194,13 +245,24 @@ function addAnalyticStats (root, options) {
   });
 }
 
+function addPlusOneCounts (plusOnes,root) {
+
+  root.plusOnes = plusOnes [root.getUrl()] || 1;  
+  
+  root.children.forEach( function (d) {
+    addPlusOneCounts (plusOnes,d);
+  });
+  
+ 
+}
+
 /**
  * this add gplus summaries
  * @param {PageTreeObject} root the top of the branch to look at
  * @param {Object} options site options for alternate roots
  * @return {PageTreeObject} root
  */
-function addPlusOneCounts (root,options,optCache) {
+function oldAddPlusOneCounts (root,options,optCache) {
   
   trace.begin (root.getUrl());
   root.plusOnes = canonPlusOnes ( root.getUrl() , options, optCache);
@@ -578,6 +640,23 @@ function refreshDb (options,pages) {
   
 }
 
+/**
+ * get current data
+ */
+function getDb () {
+
+  var options = cSiteStats.getOptions('ramblings');
+  // whatever the normal database is
+  var handler = cSiteStats.getDataHandle(options.siteCode);
+  if (!handler.isHappy()) throw 'unable to get handler' + JSON.stringify(options);
+      
+  // delete all thats there
+  var result  = handler.query ();
+  if (result.handleCode < 0) throw result;
+  
+  return result.data;
+  
+}
 
 
 /**
