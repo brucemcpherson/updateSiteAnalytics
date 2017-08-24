@@ -10,7 +10,7 @@ var PAGETYPES = {
 
 var p1SAFE = {
   id:"1181bwZspoKoP98o4KuzO0S11IsvE59qCwiw4la9kL4o",
-  name:"savedplusone"
+  name:"savedplusones"
 };
 
 // keep plus ones in cache for a few hours
@@ -22,6 +22,7 @@ var cache = new cCacheHandler.CacheHandler(60*60*5,'sitePlusOnes',false);
 var trace = new cChromeTrace.ChromeTrace().setAccessToken(ScriptApp.getOAuthToken());
 
 function onceCachePlusOnes() {
+  /** dont run this again
   
   var data = getDb()
 
@@ -47,19 +48,23 @@ function onceCachePlusOnes() {
   .dumpValues();
   
   return data;
-  
+  **/
 }
 
 
 //dont want to lose the old data as plusOnes have disappeared
 function simCachePlusOnes() {
   
-  return new cUseful.Fiddler(SpreadsheetApp.openById(p1SAFE.id).getSheetByName(p1SAFE.name))
-  .getData().reduce (function (p,c) {
+  var sheet = SpreadsheetApp.openById(p1SAFE.id).getSheetByName(p1SAFE.name);
+  Logger.log ('opening ' + JSON.stringify(p1SAFE));
+  var data =  new cUseful.Fiddler(sheet).getData();
+
+  var result = data.reduce (function (p,c) {
     p[c.url] = c.plusOnes;  
     return p;
   },{})
 
+  return result;
   
 }
 
@@ -134,6 +139,8 @@ function analyzePages() {
   
   // nowadays, the plusOnes are not updated - so just keep carrying them forward
   var plusOnes = simCachePlusOnes();
+  
+
   
   // add plus 1 counts
   addPlusOneCounts (plusOnes,root,options,true);
