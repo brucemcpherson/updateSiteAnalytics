@@ -1,5 +1,5 @@
 # Google Apps Script Project: updateSiteAnalytics
-This repo (updateSiteAnalytics) was automatically updated on 25 July 2017 16:43:48 BST by GasGit
+This repo (updateSiteAnalytics) was automatically updated on 24 August 2017 12:29:17 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project updateSiteAnalytics
@@ -19,7 +19,7 @@ cross| server_js
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
 cFlatten| cFlatten|MqxKdBrlw18FDd-X5zQLd7yz3TLx7pV4j|9|no|[here](libraries/cFlatten "library source")
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|79|no|[here](libraries/cUseful "library source")
+cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|81|no|[here](libraries/cUseful "library source")
 cSiteStats| cSiteStats|MKHWwn03HE7ktl0fffddC-iz3TLx7pV4j|8|no|[here](libraries/cSiteStats "library source")
 cDriverSheet| cDriverSheet|Mrckbr9_w7PCphJtOzhzA_Cz3TLx7pV4j|11|no|[here](libraries/cDriverSheet "library source")
 cDbAbstraction| cDbAbstraction|MHfCjPQlweartW45xYs6hFai_d-phDA33|42|no|[here](libraries/cDbAbstraction "library source")
@@ -29,7 +29,7 @@ cChromeTrace| cChromeTrace|M6SHE8Ysn-5KyFf8NGzQpTSz3TLx7pV4j|6|no|[here](librari
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
 cFlatten| cFlatten|MqxKdBrlw18FDd-X5zQLd7yz3TLx7pV4j|9|no|[here](libraries/cFlatten "library source")
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|79|no|[here](libraries/cUseful "library source")
+cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|81|no|[here](libraries/cUseful "library source")
 cSiteStats| cSiteStats|MKHWwn03HE7ktl0fffddC-iz3TLx7pV4j|8|no|[here](libraries/cSiteStats "library source")
 cDbAbstraction| cDbAbstraction|MHfCjPQlweartW45xYs6hFai_d-phDA33|37|no|[here](libraries/cDbAbstraction "library source")
 cNamedLock| cNamedLock|Mpv7vUR0126U53sfSMXsAPai_d-phDA33|15|no|[here](libraries/cNamedLock "library source")
