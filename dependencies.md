@@ -1,5 +1,5 @@
 # Google Apps Script Project: updateSiteAnalytics
-This repo (updateSiteAnalytics) was automatically updated on 24 August 2017 12:29:17 BST by GasGit
+This repo (updateSiteAnalytics) was automatically updated on 20 November 2017 12:48:23 GMT by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project updateSiteAnalytics
